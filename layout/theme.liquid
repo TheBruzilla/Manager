@@ -60,7 +60,7 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
 
     <style>
-      #loading-screen {
+  #loading-screen {
   position: fixed;
   top: 0;
   left: 0;
@@ -97,30 +97,6 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
   opacity: 0;
   pointer-events: none;
 }
- 
-      /* Fade-out effect */
-      #loading-screen {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #000;
-        z-index: 9999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        transition: opacity 0.5s ease;
-      }
-      #loading-screen.hidden {
-        opacity: 0;
-        pointer-events: none;
-      }
-      #loading-logo {
-        margin-bottom: 20px;
-        max-width: 200px;
-      }
     </style>
   </head>
 
@@ -168,9 +144,16 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     {%- endif -%}
 
     <script>
-      window.addEventListener('load', function () {
+window.addEventListener('load', function () {
   const loaderScreen = document.getElementById('loading-screen');
   const loadingLogo = document.getElementById('loading-logo');
+
+  // Check if the logo element exists
+  if (loadingLogo) {
+    console.log("Logo loaded successfully.");
+  } else {
+    console.error("Logo not found!");
+  }
 
   // Fade out loading screen after 2 seconds
   setTimeout(() => {

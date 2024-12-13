@@ -66,7 +66,7 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
         --_d: calc(0.353*var(--s));
         width: calc(var(--s) + var(--_d));
         aspect-ratio: 1;
-        display: grid;
+        display: none; /* Initially hidden */
         filter: drop-shadow(0 0 0 #fff);
         animation: l2 0.8s infinite;
         position: fixed;
@@ -74,6 +74,9 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 10000;
+      }
+      .loader.active {
+        display: grid; /* Show when active */
       }
       .loader:before {
         content: "";
@@ -160,9 +163,17 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
       // JavaScript to handle the loader fade-out effect
       window.addEventListener('load', function () {
         const loaderScreen = document.getElementById('loading-screen');
+        const loader = document.querySelector('.loader');
+
+        // Delay showing loader after logo
+        setTimeout(() => {
+          loader.classList.add('active');
+        }, 1000); // 1 second delay
+
+        // Fade out loading screen
         setTimeout(() => {
           loaderScreen.classList.add('hidden');
-        }, 1500); // Adjust delay to 1.5 seconds
+        }, 2000); // Adjust delay as needed
       });
     </script>
   </body>

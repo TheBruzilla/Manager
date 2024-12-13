@@ -176,21 +176,7 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
   setTimeout(() => {
     loaderScreen.classList.add('hidden');
   }, 2000);
-      // JavaScript to handle the loader fade-out effect
-      window.addEventListener('load', function () {
-        const loaderScreen = document.getElementById('loading-screen');
-        const loader = document.querySelector('.loader');
-
-        // Delay showing loader after logo
-        setTimeout(() => {
-          loader.classList.add('active');
-        }, 1000); // 1 second delay
-
-        // Fade out loading screen
-        setTimeout(() => {
-          loaderScreen.classList.add('hidden');
-        }, 2000); // Adjust delay as needed
-      });
+});
     </script>
   </body>
 </html>

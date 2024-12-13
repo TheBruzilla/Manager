@@ -60,36 +60,7 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
 
     <style>
-      /* Glowing Rotating Loader CSS */
-      .loader {
-        --s: 25px;
-        --_d: calc(0.353*var(--s));
-        width: calc(var(--s) + var(--_d));
-        aspect-ratio: 1;
-        display: none; /* Initially hidden */
-        filter: drop-shadow(0 0 0 #fff);
-        animation: l2 0.8s infinite;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 10000;
-      }
-      .loader.active {
-        display: grid; /* Show when active */
-      }
-      .loader:before {
-        content: "";
-        clip-path: polygon(var(--_d) 0,100% 0,100% calc(100% - var(--_d)),calc(100% - var(--_d)) 100%,0 100%,0 var(--_d));
-        background:
-          conic-gradient(from -90deg at var(--s) var(--_d),
-           #fff 135deg,#666 0 270deg,#aaa 0);
-      }
-      @keyframes l2 {
-        50% { filter: drop-shadow(0 0 5px #fff); }
-      }
-
-      /* Fade-out effect */
+       /* Fade-out effect */
       #loading-screen {
         position: fixed;
         top: 0;
@@ -110,7 +81,7 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
       }
       #loading-logo {
         margin-bottom: 20px;
-        max-width: 100px;
+        max-width: 200px;
       }
     </style>
   </head>

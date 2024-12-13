@@ -168,6 +168,15 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     {%- endif -%}
 
     <script>
+      window.addEventListener('load', function () {
+  const loaderScreen = document.getElementById('loading-screen');
+  const loadingLogo = document.getElementById('loading-logo');
+
+  // Fade out loading screen after 2 seconds
+  setTimeout(() => {
+    loaderScreen.classList.add('hidden');
+  }, 2000);
+});
       // JavaScript to handle the loader fade-out effect
       window.addEventListener('load', function () {
         const loaderScreen = document.getElementById('loading-screen');

@@ -78,9 +78,10 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
 
 #loading-logo {
   margin-bottom: 20px;
-  max-width: 200px; /* Adjust logo size */
+  max-width: 200px;
+  display: block;
+  background-color: red; /* Temporary background to see if it's being rendered */
   animation: glow-animation 1.5s infinite alternate;
-  display: block; /* Ensure it's displayed */
 }
 
 @keyframes glow-animation {
@@ -159,7 +160,7 @@ window.addEventListener('load', function () {
   setTimeout(() => {
     loaderScreen.classList.add('hidden');
   }, 2000);
-});
+});addu
     </script>
   </body>
 </html>

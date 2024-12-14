@@ -1,3 +1,12 @@
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing this theme as much as we did for
+  developing it. We have put a lot of work to make this theme as developer friendly as possible by offering you
+  hooks to integrate into critical parts of the theme. You will find the complete technical documentation (including
+  all events, dependencies...) in the "documentation.txt" file, located in the Assets folder.
+------------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
 <!doctype html>
 
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{% render 'direction' %}">
@@ -51,66 +60,52 @@
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
 
     <style>
-      /* Loading Screen Styles */
-      #loading-screen {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #000;
-        z-index: 9999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        transition: opacity 0.5s ease;
-        visibility: visible;
-      }
+  #loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: opacity 0.5s ease;
+  visibility: visible; /* Ensure the screen is visible */
+}
 
-      #loading-logo {
-        margin-bottom: 20px;
-        max-width: 200px;
-        animation: glow-animation 1.5s infinite alternate;
-        display: block;
-      }
+#loading-logo {
+  margin-bottom: 20px;
+  max-width: 200px; /* Adjust logo size */
+  animation: glow-animation 1.5s infinite alternate;
+  display: block; /* Ensure it's displayed */
+}
 
-      @keyframes glow-animation {
-        0% {
-          filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
-        }
-        100% {
-          filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-        }
-      }
+@keyframes glow-animation {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+}
 
-      /* Hide the loading screen after transition */
-      #loading-screen.hidden {
-        opacity: 0;
-        pointer-events: none;
-      }
-
-      /* Brand Logo Styles */
-      #brand-logo {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 9999;
-        display: none; /* Initially hidden */
-      }
+/* Hide the loading screen after 2 seconds */
+#loading-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
     </style>
   </head>
 
   <body class="{% if settings.show_page_transition %}page-transition{% endif %} {% if settings.zoom_image_on_hover %}zoom-image--enabled{% endif %}">
     {%- render 'shadow-dom-templates' -%}
 
-    <!-- Loading Screen and Loading Logo -->
     <div id="loading-screen">
       <img id="loading-logo" src="{{ 'Loading Screen Logo.png' | asset_url }}" alt="Logo">
     </div>
-
-    <!-- Brand Logo to show after transition -->
-    <img id="brand-logo" src="{{ 'BrandLogo.png' | asset_url }}" alt="Brand Logo">
 
     <a href="#main" class="skip-to-content sr-only">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
@@ -149,24 +144,22 @@
     {%- endif -%}
 
     <script>
-      window.addEventListener('load', function () {
-        const loaderScreen = document.getElementById('loading-screen');
-        const loadingLogo = document.getElementById('loading-logo');
-        const brandLogo = document.getElementById('brand-logo');
+window.addEventListener('load', function () {
+  const loaderScreen = document.getElementById('loading-screen');
+  const loadingLogo = document.getElementById('loading-logo');
 
-        // Check if the logo element exists
-        if (loadingLogo) {
-          console.log("Logo loaded successfully.");
-        } else {
-          console.error("Logo not found!");
-        }
+  // Check if the logo element exists
+  if (loadingLogo) {
+    console.log("Logo loaded successfully.");
+  } else {
+    console.error("Logo not found!");
+  }
 
-        // Fade out loading screen and show the brand logo after 2 seconds
-        setTimeout(() => {
-          loaderScreen.classList.add('hidden');  // Hide loading screen
-          brandLogo.style.display = 'block'; // Show brand logo
-        }, 2000);
-      });
+  // Fade out loading screen after 2 seconds
+  setTimeout(() => {
+    loaderScreen.classList.add('hidden');
+  }, 2000);
+});addu
     </script>
   </body>
 </html>

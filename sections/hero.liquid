@@ -1,6 +1,19 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
+<!-- Hero Section -->
+<section class="hero-section" style="position: relative; text-align: center; color: #fff;">
+  <!-- Background Image -->
+  <div class="hero-background" style="background: url('{{ 'hero-image.jpg' | asset_url }}') no-repeat center center/cover; height: 80vh;">
+  </div>
+
+  <!-- Hero Content -->
+  <div class="hero-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <h1 style="font-size: 3rem; margin-bottom: 20px; font-weight: bold; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
+      Welcome to Our Store
+    </h1>
+    <p style="font-size: 1.2rem; margin-bottom: 30px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
+      Discover the latest collections and exclusive offers.
+    </p>
+    <a href="/collections/all" class="hero-btn" style="background-color: #ff5722; color: #fff; padding: 15px 30px; border-radius: 5px; font-weight: bold; text-decoration: none; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); transition: all 0.3s ease;">
+      Shop Now
+    </a>
+  </div>
+</section>

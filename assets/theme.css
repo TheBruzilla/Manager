@@ -24,6 +24,12 @@ body {
   position: relative;
 }
 
+.hero-btn:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
 [dir="rtl"] :is(body) {
   letter-spacing: 0;
 }

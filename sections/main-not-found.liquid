@@ -1,8 +1,15 @@
-<section style="text-align: center; padding: 2.5px;">
-  <h4 style="font-size: 1.5rem; font-weight: bold;">Error 404 Page Not Found..</h4>
-  <h4 style="font-size: 1.5rem; font-weight: bold;">"Did you mistype it?".</h4>
-  <p> "Don’t worry, our homepage is open for business!".</p>
-  <a href="/" style="display: inline-block; padding: 5px 10px; margin-top: 20px; background-color: #000; color: #fff; text-decoration: none; border-radius: 5px;">
-    Go Home
-  </a>
-</section>
+<div class="not-found">
+  <div class="prose text-center">
+    <h2 class="h4">{{ '404.general.title' | t }}</h2>
+    {%- capture button_content -%}{{ '404.general.continue_shopping' | t }}{%- endcapture -%}
+    {%- render 'button', content: button_content, href: routes.all_products_collection_url, size: 'xl' -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "404",
+  "class": "shopify-section--404",
+  "tag": "section"
+}
+{% endschema %}

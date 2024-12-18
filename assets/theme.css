@@ -703,6 +703,16 @@ height-observer, visibility-progress, scroll-area, video-media, model-media, med
   width: var(--spacing-14);
   height: var(--spacing-14);
 }
+/* Button Hover and Shadow Effect */
+.button:hover, .btn:hover {
+  background-color: rgb(var(--button-background-primary)) !important;  /* Lighten the background on hover */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Shadow effect */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.button:focus, .btn:focus {
+  outline: 3px solid rgb(var(--button-background-primary)); /* Focus outline */
+}
 
 .animated-arrow {
   pointer-events: none;

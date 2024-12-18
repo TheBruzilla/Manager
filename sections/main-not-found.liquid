@@ -4,10 +4,9 @@
     <h4>Did you mistype it?</h4>
     <p>Don’t worry, our homepage is open for business!</p>
 
-    {%- capture button_content -%}
+    <a href="{{ routes.home_url }}" class="button button--xl">
       Go to Homepage
-    {%- endcapture -%}
-    {%- render 'button', content: button_content, href: routes.home_url, size: 'xl' -%}
+    </a>
   </div>
 </div>
 

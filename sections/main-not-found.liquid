@@ -1,16 +1,12 @@
 <div class="not-found">
   <div class="prose text-center">
-    <h2 class="h4">{{ '404.general.title' | t }}</h2>
-    
+    <h2 class="h4">Oops! This page doesn’t exist.</h2>
+    <p>Looks like you've taken a wrong turn. Let's get you back on track!</p>
+
     {%- capture button_content -%}
       {{ '404.general.continue_shopping' | t }}
-      {%- if section.settings.custom_text %}
-        <p>{{ section.settings.custom_text }}</p>
-      {% else %}
-        <p>Oops! Looks like you took a wrong turn. Let’s get you back on track!</p>
-      {% endif %}
     {%- endcapture -%}
-
+    
     {%- render 'button', content: button_content, href: routes.all_products_collection_url, size: 'xl' -%}
   </div>
 </div>
@@ -19,14 +15,6 @@
 {
   "name": "404",
   "class": "shopify-section--404",
-  "tag": "section",
-  "settings": [
-    {
-      "type": "text",
-      "id": "custom_text",
-      "label": "Custom 404 Text",
-      "default": "Oops! Looks like you took a wrong turn. Let’s get you back on track!"
-    }
-  ]
+  "tag": "section"
 }
 {% endschema %}

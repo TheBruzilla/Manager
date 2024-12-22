@@ -37,6 +37,8 @@
         "slide-2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Hero_Image_963de155-a8b1-4d19-ba4c-d01a4a953ab2.png",
+            "mobile_image": "shopify://shop_images/Hero_Image_963de155-a8b1-4d19-ba4c-d01a4a953ab2.png",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",

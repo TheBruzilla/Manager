@@ -12,5 +12,16 @@
   "context": {
     "b2b": true
   },
-  "sections": {}
+  "sections": {
+    "scrolling-text": {
+      "settings": {
+        "text": "Store Opening Soon",
+        "text_size": "small",
+        "text_style": "outline",
+        "scrolling_mode": "scroll",
+        "scrolling_speed": 3
+      },
+      "blocks": {}
+    }
+  }
 }

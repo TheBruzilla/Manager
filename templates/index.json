@@ -79,6 +79,7 @@
         "1664424046b00c932c-0": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/young-man-in-bright-fashion_925x_2fe27685-920b-4e2e-ab78-b89b961fb7c5.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -91,6 +92,7 @@
         "1664424046b00c932c-1": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/woman-in-the-city_925x_5b8e03d4-7b77-4cd7-aa0e-9b2d5fb70a49.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -103,6 +105,7 @@
         "1664424046b00c932c-2": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/putting-on-your-shoes_925x_9326f673-4660-4f93-bd27-b7f8933cafe5.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -115,6 +118,7 @@
         "1664424046b00c932c-3": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/urban-fashion_925x_788e6605-d66a-40d1-8827-91e018a86386.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",
@@ -127,6 +131,7 @@
         "e4a0ef18-1856-4ddd-83d8-871a60d7acac": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/woman-outside-brownstone_925x_728cbede-40b6-4b8a-8bf6-4ec8993a8519.jpg",
             "stretch_image": true,
             "link_text": "",
             "link_url": "",

@@ -1,7 +1,7 @@
 <div style="text-align: center; margin: 20px 0; padding: 10px;">
   <!-- Logo -->
   <img src="{{ 'hero image.png' | asset_url }}" alt="Rougeify Logo" 
-       width="120" height="auto" style="max-width: 120px; margin-bottom: 10px; animation: fadeIn 2s ease-in-out;">
+       width="120" height="auto" style="max-width: 120px; margin-bottom: 10px; animation: fadeIn 2s ease-in-out; display: block; margin-left: auto; margin-right: auto;">
   
   <!-- Text -->
   <p style="font-size: 1rem; color: #ffffff; font-style: italic; margin: 10px 0;">
@@ -17,6 +17,7 @@
     }
   </style>
 </div>
+
 
 {%- assign newsletter_block = section.blocks | where: 'type', 'newsletter' | first -%}
 

@@ -5,60 +5,116 @@ extremely sensitive code that should (if possible) not be touched unless you hav
 the underlying logic of the menu.
 {%- endcomment -%}
 
-{%- if section.settings.show_country_selector and localization.available_countries.size > 1 -%}
-  {%- assign will_show_country_selector = true -%}
-{%- endif -%}
+<!-- Header Section -->
+<header class="custom-header">
+  <div class="header-container">
+    <!-- Logo -->
+    <a href="/" class="header-logo">
+      <img src="path/to/your-logo.png" alt="Your Brand Logo">
+    </a>
+    <!-- Navigation Menu -->
+    <nav class="header-nav">
+      <ul class="nav-links">
+        <li><a href="/collections/all">Shop</a></li>
+        <li><a href="/pages/our-story">Our Story</a></li>
+        <li><a href="/pages/blog">Blog</a></li>
+        <li><a href="/pages/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Right Side (Icons/Cart) -->
+    <div class="header-right">
+      <a href="/search" class="header-icon">🔍</a>
+      <a href="/cart" class="header-icon">🛒</a>
+    </div>
+  </div>
+</header>
 
-{%- if section.settings.show_locale_selector and localization.available_languages.size > 1 -%}
-  {%- assign will_show_locale_selector = true -%}
-{%- endif -%}
-
+<!-- Styles -->
 <style>
-  :root {
-    --sticky-header-enabled: {%- if section.settings.enable_sticky -%}1{% else %}0{% endif %};
-    --header-background-opacity: {{ section.settings.background_opacity | default: 0.8 | divided_by: 100.0 }};
-    --header-background-blur-radius: {{ section.settings.background_blur_radius | default: 0 }}px;
-    --header-transparent-text-color: {{ section.settings.transparent_header_text_color.rgb | default: '#FFFFFF' }};
+  /* Header Container */
+  .custom-header {
+    background-color: #000; /* Dark background */
+    color: #fff; /* White text */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   }
 
-  #shopify-section-{{ section.id }} {
-    --header-grid-template: "main-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr);
-    --header-padding-block: {% if section.settings.reduce_padding %}var(--spacing-3){% else %}var(--spacing-4-5){% endif %};
-
-    {%- if section.settings.logo != blank -%}
-      --header-logo-width: {{ section.settings.logo_mobile_max_width }}px;
-      --header-logo-height: {{ section.settings.logo_mobile_max_width | divided_by: section.settings.logo.aspect_ratio | round }}px;
-    {%- else -%}
-      --header-logo-width: 100px; /* Fallback logo size */
-      --header-logo-height: 50px; /* Fallback height */
-    {%- endif -%}
-
-    position: {% if section.settings.enable_sticky %}sticky{% else %}relative{% endif %};
-    top: {% if section.settings.enable_sticky %}calc(var(--sticky-announcement-bar-enabled, 0) * var(--announcement-bar-height, 0px)){% else %}0{% endif %};
-    z-index: 10;
-    border-radius: 10px;
-    overflow: hidden;
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  @media screen and (min-width: 700px) {
-    #shopify-section-{{ section.id }} {
-      --header-padding-block: {% if section.settings.reduce_padding %}var(--spacing-6){% else %}var(--spacing-8-5){% endif %};
+  /* Logo */
+  .header-logo img {
+    height: 40px;
+    max-width: 100%;
+  }
+
+  /* Navigation Menu */
+  .header-nav {
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #d00000; /* Red hover color */
+  }
+
+  /* Right Section (Icons) */
+  .header-right {
+    display: flex;
+    gap: 15px;
+  }
+
+  .header-icon {
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .header-icon:hover {
+    color: #d00000; /* Red hover color */
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: center;
     }
-  }
 
-  @media screen and (min-width: 1150px) {
-    {%- if section.settings.layout contains 'logo_left' -%}
-      {%- assign max_percent = '55%' -%}
-    {%- else -%}
-      {%- assign max_percent = '70%' -%}
-    {%- endif -%}
-
-    #shopify-section-{{ section.id }} {
-      --header-grid-template: "logo main-nav secondary-nav" / {% if section.settings.layout == 'logo_left_navigation_inline' %}auto minmax(0, 1fr) minmax(0, max-content){% else %}minmax(0, 1fr) fit-content({{ max_percent }}) minmax(0, 1fr){% endif %};
+    .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
     }
   }
 </style>
-
 
 <height-observer variable="header">
   <store-header class="header" {% if section.settings.hide_on_scroll %}hide-on-scroll="100"{% endif %} {% if section.settings.enable_sticky %}sticky{% endif %}>

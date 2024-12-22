@@ -49,12 +49,12 @@ the underlying logic of the menu.
   #shopify-section-{{ section.id }} {
     {%- if section.settings.logo != blank -%}
       --header-logo-width: 180px; /* Adjust to your desired width */
-      --header-logo-height: 60px; /* Adjust to your desired height */
+      --header-logo-height: calc(var(--header-logo-width) / {{ section.settings.logo.aspect_ratio }}); /* Dynamic height */
     {%- endif -%}
 
     --header-padding-block: {% if section.settings.reduce_padding %}var(--spacing-6){% else %}var(--spacing-8-5){% endif %};
   }
-
+}
   {%- if section.settings.layout contains 'logo_left' -%}
     @media screen and (min-width: 1150px) {
       {%- if section.settings.secondary_menu != blank or will_show_country_selector or will_show_locale_selector -%}

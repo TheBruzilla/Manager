@@ -551,18 +551,6 @@
     "hot-spots": {
       "type": "hot-spots",
       "blocks": {
-        "1664424434f5b7d0e0-0": {
-          "type": "item",
-          "settings": {
-            "horizontal_position": 24,
-            "vertical_position": 70,
-            "horizontal_position_mobile": 24,
-            "vertical_position_mobile": 70,
-            "icon_width": 32,
-            "title": "Feature name",
-            "content": "<p>Share useful information about your product features.</p>"
-          }
-        },
         "1664424434f5b7d0e0-1": {
           "type": "item",
           "settings": {
@@ -586,22 +574,34 @@
             "title": "Feature name",
             "content": "<p>Share useful information about your product features.</p>"
           }
+        },
+        "item_iRRMcj": {
+          "type": "item",
+          "settings": {
+            "horizontal_position": 30,
+            "vertical_position": 30,
+            "horizontal_position_mobile": 30,
+            "vertical_position_mobile": 30,
+            "icon_width": 32,
+            "title": "Feature name",
+            "content": "<p>Share useful information about your product features.</p>"
+          }
         }
       },
       "block_order": [
-        "1664424434f5b7d0e0-0",
         "1664424434f5b7d0e0-1",
-        "1664424434f5b7d0e0-2"
+        "1664424434f5b7d0e0-2",
+        "item_iRRMcj"
       ],
       "settings": {
-        "full_width": true,
+        "full_width": false,
         "image": "shopify://shop_images/man-adjusts-blue-tuxedo-bowtie_925x_72671273-83c6-4ca2-abf3-da085c502a3d.jpg",
         "mobile_image": "shopify://shop_images/man-adjusts-blue-tuxedo-bowtie_925x_72671273-83c6-4ca2-abf3-da085c502a3d.jpg",
         "title": "",
         "content": "",
         "button_text": "",
         "button_url": "",
-        "desktop_text_position": "place-self-start text-start",
+        "desktop_text_position": "place-self-center-start text-start",
         "image_background": "",
         "image_background_gradient": "",
         "overlay_color": "#000000",

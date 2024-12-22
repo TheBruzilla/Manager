@@ -1,3 +1,23 @@
+<div style="text-align: center; margin: 20px 0; padding: 10px;">
+  <!-- Logo -->
+  <img src="{{ 'rougeify-logo.png' | asset_url }}" alt="Rougeify Logo" 
+       width="120" height="auto" style="max-width: 120px; margin-bottom: 10px; animation: fadeIn 2s ease-in-out;">
+  
+  <!-- Text -->
+  <p style="font-size: 1rem; color: #333; font-style: italic; margin: 10px 0;">
+    From us to you, with care – 
+    <strong><a href="/about" style="text-decoration: none; color: #D00000;" title="Learn more about Rougeify">Rougeify</a></strong>.
+  </p>
+
+  <!-- Animation Styles -->
+  <style>
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</div>
+
 {%- assign newsletter_block = section.blocks | where: 'type', 'newsletter' | first -%}
 
 {%- if section.blocks.size > 3 -%}

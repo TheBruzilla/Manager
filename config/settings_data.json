@@ -70,8 +70,8 @@
       "header": {
         "type": "header",
         "custom_css": [
-          "/* Custom Header Text Glow */.header h1, .header p, .header a {color: #fff; /* White text */ text-shadow: 0 0 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(255, 0, 0, 0.7);}",
-          "/* Hover effect */.header a:hover {color: #D00000; text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8);}"
+          "/* Custom Header Text Glow */.header h1,.header p,.header a {color: #fff; /* White text */ text-shadow: 0 0 5px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.7); /* Dark black glow */}",
+          "/* Hover effect */.header a:hover {color: #D3D3D3; /* Optional color change on hover */ text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.8); /* Darker black glow on hover */}"
         ],
         "settings": {
           "enable_sticky": true,

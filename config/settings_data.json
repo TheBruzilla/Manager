@@ -59,11 +59,11 @@
         ],
         "settings": {
           "enable_sticky": false,
-          "text_size": "text-xs",
+          "text_size": "text-base",
           "navigation_mode": "scrolling",
           "scrolling_speed": 10,
           "background": "#ff0000",
-          "background_gradient": "",
+          "background_gradient": "linear-gradient(180deg, rgba(240, 69, 87, 1), rgba(221, 39, 57, 1) 100%)",
           "text_color": "#ffffff"
         }
       },

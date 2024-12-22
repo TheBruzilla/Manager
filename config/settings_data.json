@@ -70,7 +70,7 @@
           "enable_sticky": true,
           "hide_on_scroll": false,
           "logo": "shopify://shop_images/Cart_Image.png",
-          "logo_max_width": 60,
+          "logo_max_width": 40,
           "logo_mobile_max_width": 70,
           "menu": "main-menu",
           "sidebar_menu": "",

@@ -33,7 +33,7 @@ the underlying logic of the menu.
     position: {% if section.settings.enable_sticky %}sticky{% else %}relative{% endif %};
     top: {% if section.settings.enable_sticky %}calc(var(--sticky-announcement-bar-enabled, 0) * var(--announcement-bar-height, 0px)){% else %}0{% endif %};
     z-index: 10;
-    border-radius: 20px;  /* Apply rounded corners */
+    border-radius: 10px;  /* Apply rounded corners */
     overflow: hidden; /* Ensure content stays within rounded corners */
   }
 

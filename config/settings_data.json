@@ -69,6 +69,10 @@
       },
       "header": {
         "type": "header",
+        "custom_css": [
+          "/* Custom Header Text Glow */.header h1, .header p, .header a {color: #fff; /* White text */ text-shadow: 0 0 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(255, 0, 0, 0.7);}",
+          "/* Hover effect */.header a:hover {color: #D00000; text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8);}"
+        ],
         "settings": {
           "enable_sticky": true,
           "hide_on_scroll": false,

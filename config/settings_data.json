@@ -57,13 +57,14 @@
         "block_order": [
           "message"
         ],
+        "custom_css": [],
         "settings": {
           "enable_sticky": false,
           "text_size": "text-base",
           "navigation_mode": "scrolling",
           "scrolling_speed": 10,
           "background": "#ff0000",
-          "background_gradient": "radial-gradient(rgba(255, 0, 27, 1) 80%, rgba(115, 88, 91, 1) 100%)",
+          "background_gradient": "radial-gradient(at center, rgba(147, 2, 24, 1.0), rgba(193, 34, 13, 1.0))",
           "text_color": "#ffffff"
         }
       },

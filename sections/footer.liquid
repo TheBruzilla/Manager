@@ -1,4 +1,4 @@
-<div style="text-align: center; margin: 20px 0; padding: 10px; background: linear-gradient(135deg, #D00000, #5A0B14);">
+<div style="text-align: center; margin: 20px 0; padding: 10px;">
   <!-- Logo -->
   <img src="{{ 'hero image.png' | asset_url }}" alt="Rougeify Logo" 
        width="120" height="auto" style="max-width: 120px; margin-bottom: 10px; animation: fadeIn 2s ease-in-out; display: block; margin-left: auto; margin-right: auto;">
@@ -15,29 +15,9 @@
       0% { opacity: 0; transform: translateY(10px); }
       100% { opacity: 1; transform: translateY(0); }
     }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      /* For tablets and mobile devices */
-      .logo {
-        width: 100px; /* Adjust size for smaller screens */
-      }
-      p {
-        font-size: 0.9rem; /* Smaller text on mobile */
-      }
-    }
-
-    @media (max-width: 480px) {
-      /* For mobile devices */
-      .logo {
-        width: 80px; /* Further decrease size on smaller screens */
-      }
-      p {
-        font-size: 0.8rem; /* Even smaller text on mobile */
-      }
-    }
   </style>
 </div>
+
 
 {%- assign newsletter_block = section.blocks | where: 'type', 'newsletter' | first -%}
 

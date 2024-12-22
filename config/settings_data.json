@@ -70,12 +70,12 @@
           "enable_sticky": true,
           "hide_on_scroll": true,
           "logo": "shopify://shop_images/Cart_Image.png",
-          "logo_max_width": 75,
+          "logo_max_width": 45,
           "logo_mobile_max_width": 50,
           "menu": "main-menu",
           "sidebar_menu": "",
           "secondary_menu": "",
-          "menu_open_trigger": "click",
+          "menu_open_trigger": "hover",
           "opening_from": "bottom",
           "layout": "logo_left_navigation_center",
           "show_social_media": true,
@@ -85,7 +85,7 @@
           "show_country_name": false,
           "transparent_header_text_color": "#ffffff",
           "transparent_logo": "shopify://shop_images/Cart_Image.png",
-          "reduce_padding": true,
+          "reduce_padding": false,
           "background_opacity": 100,
           "background_blur_radius": 0
         }

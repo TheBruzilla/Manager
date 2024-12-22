@@ -182,10 +182,26 @@
     "collection-list": {
       "type": "collection-list",
       "blocks": {
+        "collection_bwEPHY": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/menswear-blue-zip-up-jacket_925x_153f4c5e-15aa-4bbe-b7ce-b581c1a2eecb.jpg",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
         "collection-1": {
           "type": "collection",
           "settings": {
             "collection": "",
+            "image": "shopify://shop_images/smiling-woman-poses_925x_fa96e8d4-251c-43d7-8951-314005f8ae0d.jpg",
             "subheading": "",
             "title": "",
             "url": "",
@@ -200,6 +216,7 @@
           "type": "collection",
           "settings": {
             "collection": "",
+            "image": "shopify://shop_images/womens-red-t-shirt_925x_907177bc-30c8-4e79-8e0c-1aa5433a3f82.jpg",
             "subheading": "",
             "title": "",
             "url": "",
@@ -214,6 +231,7 @@
           "type": "collection",
           "settings": {
             "collection": "",
+            "image": "shopify://shop_images/woman-in-the-city_925x_5b8e03d4-7b77-4cd7-aa0e-9b2d5fb70a49.jpg",
             "subheading": "",
             "title": "",
             "url": "",
@@ -226,6 +244,7 @@
         }
       },
       "block_order": [
+        "collection_bwEPHY",
         "collection-1",
         "collection-2",
         "collection-3"
@@ -251,7 +270,17 @@
       "type": "featured-collection",
       "settings": {
         "collection": "",
-        "products": [],
+        "products": [
+          "black-leather-bag",
+          "blue-silk-tuxedo",
+          "chequered-red-shirt",
+          "classic-leather-jacket",
+          "classic-varsity-top",
+          "dark-denim-top",
+          "floral-white-top",
+          "led-high-tops",
+          "longsleeve-cotton-top"
+        ],
         "full_width": true,
         "stack_products": false,
         "show_progress_bar": false,
@@ -335,6 +364,7 @@
         "1664424230c4756b0e-1",
         "1664424230c4756b0e-2"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "allow_transparent_header": false,
@@ -353,6 +383,7 @@
         "item-1": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/autumn-photographer-taking-picture_925x_d98d3acf-f798-4f59-90f0-f5f46df174bb.jpg",
             "title": "Promote your products",
             "heading_tag": "h4",
             "link_url": "",
@@ -374,6 +405,7 @@
         "item-2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/smiling-woman-on-snowy-afternoon_925x_206fae9b-e89b-4921-9c7c-ad2aaa001e73.jpg",
             "title": "Promote your products",
             "heading_tag": "h4",
             "link_url": "",
@@ -395,6 +427,7 @@
         "item-3": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/smiling-woman-poses_925x_fa96e8d4-251c-43d7-8951-314005f8ae0d.jpg",
             "title": "Promote your products",
             "heading_tag": "h4",
             "link_url": "",
@@ -416,6 +449,7 @@
         "29246d34-c6e0-4373-84f6-b15e57736a00": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/woman-outside-brownstone_925x_728cbede-40b6-4b8a-8bf6-4ec8993a8519.jpg",
             "title": "Promote your products",
             "heading_tag": "h4",
             "link_url": "",
@@ -457,6 +491,8 @@
         "subheading": "",
         "title": "Before/after",
         "content": "<p>Showcase your product benefit by using before/after image comparison.</p>",
+        "before_image": "shopify://shop_images/womens-red-t-shirt_925x_907177bc-30c8-4e79-8e0c-1aa5433a3f82.jpg",
+        "after_image": "shopify://shop_images/menswear-blue-zip-up-jacket_925x_153f4c5e-15aa-4bbe-b7ce-b581c1a2eecb.jpg",
         "expand_image": false,
         "text_position": "center",
         "before_after_text_position": "bottom",
@@ -559,6 +595,8 @@
       ],
       "settings": {
         "full_width": true,
+        "image": "shopify://shop_images/man-adjusts-blue-tuxedo-bowtie_925x_72671273-83c6-4ca2-abf3-da085c502a3d.jpg",
+        "mobile_image": "shopify://shop_images/man-adjusts-blue-tuxedo-bowtie_925x_72671273-83c6-4ca2-abf3-da085c502a3d.jpg",
         "title": "",
         "content": "",
         "button_text": "",
@@ -609,6 +647,7 @@
         "1664424486a2b084ab-0",
         "1664424486a2b084ab-1"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "images_layout": "scattered",
@@ -696,6 +735,7 @@
         "quantity-selector",
         "buy-buttons"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "product": "",
@@ -720,10 +760,10 @@
         "16644246508f6fa13a-0": {
           "type": "headings",
           "settings": {
-            "heading_1": "Heading 1",
-            "heading_2": "Heading 2",
-            "heading_3": "Heading 3",
-            "heading_4": "Heading 4",
+            "heading_1": "XL",
+            "heading_2": "L",
+            "heading_3": "M",
+            "heading_4": "S",
             "heading_5": "",
             "heading_6": "",
             "heading_7": "",

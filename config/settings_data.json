@@ -35,6 +35,8 @@
     "currency_code_enabled": true,
     "show_page_transition": true,
     "heading_apparition": "split_fade",
+    "show_vendor": false,
+    "show_product_rating": true,
     "product_color_display": "swatch",
     "product_info_alignment": "start",
     "favicon": "shopify://shop_images/Loading_Screen_Logo.png",

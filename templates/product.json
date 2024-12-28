@@ -38,6 +38,12 @@
             "show_empty": false
           }
         },
+        "inventory_hcjpWP": {
+          "type": "inventory",
+          "settings": {
+            "low_inventory_threshold": 0
+          }
+        },
         "payment_terms": {
           "type": "payment_terms",
           "settings": {}
@@ -83,6 +89,7 @@
         "badges",
         "price",
         "rating",
+        "inventory_hcjpWP",
         "payment_terms",
         "separator",
         "description",

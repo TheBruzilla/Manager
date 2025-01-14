@@ -1,6 +1,6 @@
 <cart-drawer {% if request.design_mode %}handle-section-events{% endif %} 
     class="cart-drawer drawer drawer--lg" id="cart-drawer" 
-    style="background-color: #000000;"> <!-- Background color set to black -->
+    style="background-color: #FF0000;"> <!-- Background color set to black -->
 
   {%- if cart.item_count == 0 -%}
     <button is="close-button" aria-label="{{ 'general.accessibility.close' | t | escape }}">
@@ -77,12 +77,12 @@
           {%- assign view_cart_label = 'cart.general.view_cart' | t -%}
           {%- assign checkout_label = 'cart.general.checkout' | t -%}
 
-          {%- render 'button', href: routes.cart_url, content: view_cart_label, secondary: section.settings.show_checkout_button, size: 'xl', style: 'background-color: #FFD700;' -%} 
-          <!-- Button color set to yellow (#FFD700) -->
+          {%- render 'button', href: routes.cart_url, content: view_cart_label, secondary: section.settings.show_checkout_button, size: 'xl', style: 'background-color: #000000;' -%} 
+          <!-- Button color set to black (#000000) -->
 
           {%- if section.settings.show_checkout_button -%}
-            {%- render 'button', type: 'submit', content: checkout_label, icon: 'picto-lock', name: 'checkout', size: 'xl', style: 'background-color: #FFD700;' -%} 
-            <!-- Button color set to yellow (#FFD700) -->
+            {%- render 'button', type: 'submit', content: checkout_label, icon: 'picto-lock', name: 'checkout', size: 'xl', style: 'background-color: #FF0000;' -%} 
+            <!-- Button color set to red (#FF0000) -->
           {%- endif -%}
         </form>
       </div>

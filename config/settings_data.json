@@ -124,10 +124,7 @@
           "mega_menu_aXj4DB",
           "mega_menu_jyfiAA"
         ],
-        "custom_css": [
-          "/* Custom Header Text Glow */.header h1,.header p,.header a {color: #fff; /* White text */ text-shadow: 0 0 5px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.7); /* Dark black glow */}",
-          " /* Hover effect */.header a:hover {color: #d3d3d3; /* Optional color change on hover */ text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.8); /* Darker black glow on hover */}"
-        ],
+        "custom_css": [],
         "settings": {
           "enable_sticky": true,
           "hide_on_scroll": false,
@@ -147,9 +144,9 @@
           "show_country_name": false,
           "transparent_header_text_color": "#ffffff",
           "transparent_logo": "shopify://shop_images/Cart_Image.png",
-          "reduce_padding": false,
+          "reduce_padding": true,
           "background_opacity": 100,
-          "background_blur_radius": 0
+          "background_blur_radius": 8
         }
       },
       "cart-drawer": {

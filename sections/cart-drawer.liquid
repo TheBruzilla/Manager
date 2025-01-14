@@ -1,6 +1,6 @@
 <cart-drawer {% if request.design_mode %}handle-section-events{% endif %} 
     class="cart-drawer drawer drawer--lg" id="cart-drawer" 
-    style="background-color: #FF0000;"> <!-- Background color set to black -->
+    style="background-color: #000000;"> <!-- Background color set to black -->
 
   {%- if cart.item_count == 0 -%}
     <button is="close-button" aria-label="{{ 'general.accessibility.close' | t | escape }}">
@@ -17,7 +17,7 @@
         <p class="h5">{{ 'cart.general.empty' | t }}</p>
 
         {%- assign button_content = 'cart.general.continue_shopping' | t -%}
-        {%- render 'button', href: settings.cart_empty_button_link, size: 'xl', content: button_content, style: 'background-color: #FFD700;' -%} 
+        {%- render 'button', href: settings.cart_empty_button_link, size: 'xl', content: button_content, style: 'background-color: #000000;' -%} 
         <!-- Button color set to yellow (#FFD700) -->
       </div>
     </div>
